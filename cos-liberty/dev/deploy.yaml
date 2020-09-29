@@ -78,7 +78,7 @@ spec:
         - name: cos-liberty
           env:
             - name: DB2_HOST
-              value: liberty-db2u.svc
+              value: db2.db2.svc
             - name: DB2_PORT
               value: "50000"
             - name: DB2_DBNAME
@@ -86,8 +86,8 @@ spec:
             - name: DB2_USER
               value: db2inst1
             - name: DB2_PASSWORD
-              value: password
-          image: image-registry.openshift-image-registry.svc:5000/cos-liberty-tekton/cos-liberty:7e300fc
+              value: db2inst1
+          image: image-registry.openshift-image-registry.svc:5000/cos-liberty-tekton/cos-liberty:c43faae
           imagePullPolicy: Always
           livenessProbe:
             tcpSocket:
